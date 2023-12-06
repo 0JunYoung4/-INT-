@@ -12,7 +12,7 @@ public:
 
 	INT& operator++() {		//전위 증가
 		++val;
-		return*this;
+		return *this;
 	}
 
 	INT& operator++(int) {
@@ -21,9 +21,12 @@ public:
 		return temp;
 	}		// n ++ ++ ++ 이게 안됨 왜 안될까?
 
-
-
-	friend ostream operator<<(ostream& os,  INT s) {
-		return os << s;
+	friend ostream& operator<<(ostream& os,const  INT& s) {
+		return os << s.val;
 	}
 };
+
+int main()
+{
+	
+}
